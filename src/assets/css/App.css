@@ -1,0 +1,142 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts//Poppins-Medium.ttf");
+}
+
+body {
+  overflow: hidden;
+  font-family: Poppins, "sans-serif";
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+#editor-container {
+  height: 375px;
+}
+
+.main {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 70vw;
+  height: 100vh;
+  padding-left: 40px;
+}
+
+.main-heading {
+  margin-top: 20px;
+  height: 20px;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.main hr {
+  border: none;
+  height: 0px;
+  width: 80%;
+  margin-top: 20px;
+  background: transparent;
+  border-bottom: solid 2px black;
+}
+
+.ql-toolbar {
+  z-index: 4;
+  background-color: #444 !important;
+  width: max-content !important;
+  border-radius: 12px !important;
+}
+
+.ql-bubble .ql-tooltip {
+  left: 0px !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+}
+.ql-bubble .ql-tooltip:not(.ql-flip) .ql-tooltip-arrow {
+  left: 22px !important;
+}
+.add-btn {
+  z-index: 10;
+  box-shadow: 2px 2px 6px 1px gray;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.add-btn-img {
+  background-color: darkorange;
+  z-index: 10;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-btn-img img {
+  height: 40px;
+  width: 40px;
+}
+
+.choose-btn {
+  animation: popup 500ms ease;
+  animation-timing-function: linear;
+  height: 120px;
+  width: 60px;
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: -120px;
+  right: -2px;
+  background-color: whitesmoke;
+}
+
+@keyframes popup {
+  0% {
+    top: 0px;
+    visibility: hidden;
+    z-index: -1;
+  }
+  25% {
+    top: -40px;
+    visibility: hidden;
+    z-index: -1;
+  }
+  50% {
+    top: -80px;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  100% {
+    top: -120px;
+    visibility: visible;
+    z-index: -1;
+  }
+}
+
+.choose-btn img {
+  border-radius: 50%;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+}
+
+.choose-btn img:hover {
+  background-color: orange;
+}
+
+.main::-webkit-scrollbar {
+  visibility: hidden;
+}

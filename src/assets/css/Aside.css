@@ -1,0 +1,147 @@
+aside {
+  height: 100vh;
+  width: 50vh;
+  background-color: rgba(248, 243, 238, 0.767);
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+.account {
+  margin-top: 30px;
+  height: 10%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-dp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+.account-details {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+}
+.account-dp img {
+  height: 40px;
+  width: 40px;
+}
+.acc-email {
+  font-size: 14px;
+  color: gray;
+}
+
+.search-bar {
+  height: 10%;
+  width: 90%;
+}
+
+input[type="text"] {
+  outline: none;
+}
+
+.notebooks {
+  margin-top: 10px;
+  height: 38%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.notebooks ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.notebooks ul li {
+  margin-top: 10px;
+  display: flex;
+  font-size: 14px;
+  color: rgb(50, 49, 49);
+}
+.notebooks ul li img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.bookmarks {
+  margin-top: 10px;
+  height: 18%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.notebooks h2,
+.bookmarks h2 {
+  height: 10%;
+  margin: 0px;
+  margin: 12px 0px;
+  padding: 0px;
+  color: gray;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.bookmarks ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.bookmarks ul li {
+  font-size: 14px;
+  color: rgb(50, 49, 49);
+  margin-top: 10px;
+  display: flex;
+}
+
+.bookmarks ul li img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.trash {
+  display: flex;
+  height: 6%;
+  width: 100%;
+  font-size: 15px;
+  color: rgb(41, 41, 41);
+}
+
+.trash img {
+  margin-right: 10px;
+  height: 18px;
+  width: 18px;
+}
+
+.add-new {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  color: rgb(255, 132, 0);
+  font-size: 15px;
+}
+
+.add-new img {
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
+}
+hr {
+  width: 80%;
+  margin: 10px 0px;
+  border-bottom: solid 1.5px gray;
+}
