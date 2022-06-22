@@ -1,12 +1,14 @@
 import { React, useState } from "react";
 import ReactQuill from "react-quill";
-import "react-quill/dist/quill.bubble.css";
+import "react-quill/dist/quill.bubble.css"; //used bubble css for bubble toolbar
+
+//Quill editor functiona; Component
 export function Editor(props) {
   let [quillState, setQuillState] = useState("");
-
   const handleChange = (html) => {
     setQuillState(html);
   };
+
   return (
     <div>
       <ReactQuill

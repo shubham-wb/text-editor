@@ -2,6 +2,8 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import add from "../assets/images/add.svg";
 import "../assets/css/Aside.css";
+
+// dummy aside component for UI
 function Aside() {
   return (
     <aside>

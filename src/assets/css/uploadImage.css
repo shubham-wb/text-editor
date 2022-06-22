@@ -1,0 +1,98 @@
+.upload-img {
+  margin-top: 20px;
+
+  height: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn {
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#btn h5 {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  line-height: 40px;
+  border-radius: 50%;
+  background: orange;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+  top: 20px;
+  left: 70px;
+}
+
+#btn:hover #circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+
+#btn:hover h5 {
+  color: white;
+}
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid darkorange;
+  margin: 10px 0px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.btn-remove {
+  font-family: inherit;
+  display: inline-flex;
+  height: 30px;
+  width: 80px;
+  border: solid 2px transparent;
+  background-color: rgb(255 120 66);
+  margin: 10px 0px;
+  color: #00000096;
+  cursor: pointer;
+  font-size: 8px;
+  align-items: center;
+  border-radius: 7px;
+  justify-content: center;
+  letter-spacing: 0.6px;
+  background: gold;
+  box-shadow: #423f3f 3px 3px 2px 1px;
+  color: black;
+}
+
+.btn-remove:focus {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+}
+h5 {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+input[type="file"] {
+  height: 0;
+  width: 0;
+}
+ 

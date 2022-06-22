@@ -1,15 +1,24 @@
 import React, { useState } from "react";
+import "../assets/css/App.css"; //  css file
+
+//--------->  components
 import Aside from "./Aside";
 import Editor from "./Editor";
-import "../assets/css/App.css";
 import Add from "./Add";
 import UploadAndDisplayImage from "./UploadAndDisplayImage";
+//
+
+//App component
 const App = () => {
   let [elements, setElements] = useState([]);
 
+  //function to handle add component to editor ( image / text)
   function handleAdd(value) {
     if (value === 0) {
       setElements((prev) => [...prev, <UploadAndDisplayImage />]);
+
+      let scroll = document.querySelector(".main");
+      scroll.scrollTop = scroll.scrollHeight;
     } else {
       setElements((prev) => [
         ...prev,
@@ -28,6 +37,10 @@ const App = () => {
           }}
         />,
       ]);
+
+      let scroll = document.querySelector(".main");
+
+      scroll.scrollTop = scroll.scrollHeight;
     }
   }
 
@@ -41,6 +54,8 @@ const App = () => {
         <Editor
           placeholder={"Write something..."}
           data={{
+            isFixed: true,
+
             Editor: {
               paddingTop: "20px",
               paddingLeft: "20px",
@@ -54,6 +69,7 @@ const App = () => {
           }}
         />
         {elements.length !== 0 ? elements.map((elem) => elem) : null}
+        {/* mapping the compoents added later by plus button */}
       </div>
     </div>
   );

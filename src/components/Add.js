@@ -3,8 +3,24 @@ import add from "../assets/images/plus.svg";
 import image from "../assets/images/image.svg";
 import write from "../assets/images/write.svg";
 
+//function to add components Image/text
 function Add(props) {
   let [showBtn, setShowBtn] = useState(false);
+
+  //function to rotate add Button (UI Part)
+  function addTransition() {
+    if (showBtn) {
+      return `rotateZ(45deg)`;
+    } else {
+      return `rotateZ(180deg)`;
+    }
+  }
+
+  const styles = {
+    add: {
+      transform: addTransition(),
+    },
+  };
   return (
     <>
       <div className='add-btn'>
@@ -32,13 +48,16 @@ function Add(props) {
             />
           </div>
         ) : null}
-        <div
-          className='add-btn-img'
-          onClick={() => {
-            setShowBtn((prev) => !prev);
-          }}
-        >
-          <img src={add} alt='plus'></img>
+        <div className='add-btn-img'>
+          <img
+            src={add}
+            alt='plus'
+            id='pls-btn'
+            style={styles.add}
+            onClick={() => {
+              setShowBtn((prev) => !prev);
+            }}
+          ></img>
         </div>
       </div>
     </>

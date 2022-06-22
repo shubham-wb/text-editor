@@ -3,6 +3,7 @@ import { useState } from "react";
 import searchIco from "../assets/images/search.svg";
 import close from "../assets/images/close.svg";
 
+//Search bar Component for aside component (dummy)
 function SearchBar() {
   let [value, setValue] = useState("");
 

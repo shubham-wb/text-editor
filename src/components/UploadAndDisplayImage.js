@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, createRef } from "react";
+import "../assets/css/uploadImage.css"; // css file
 
-const UploadAndDisplayImage = () => {
+//functional component to add image
+const UploadAndDisplayImage = (props) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  let imageInput = createRef();
+
+  //handle click of add image button ---> clicking on input element
+  const handleClick = () => {
+    imageInput.current.click();
+  };
 
   return (
-    <div>
-      <h1>Upload and Display Image usign React Hook's</h1>
-      {selectedImage && (
+    <div className='upload-img'>
+      {selectedImage ? (
         <div>
           <img
             alt='not fount'
@@ -14,20 +21,34 @@ const UploadAndDisplayImage = () => {
             src={URL.createObjectURL(selectedImage)}
           />
           <br />
-          <button onClick={() => setSelectedImage(null)}>Remove</button>
+          <button className='btn-remove' onClick={() => setSelectedImage(null)}>
+            Remove
+          </button>
+        </div>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h3 style={{ fontWeight: "400" }}>Click on Upload to add an Image</h3>
+          <div className='button' id='btn' onClick={handleClick}>
+            <div id='circle'></div>
+            <h5>Upload Image</h5>
+          </div>
+          <input
+            type='file'
+            name='myImage'
+            ref={imageInput}
+            onChange={(event) => {
+              setSelectedImage(event.target.files[0]);
+            }}
+          />
         </div>
       )}
-      <br />
-
-      <br />
-      <input
-        type='file'
-        name='myImage'
-        onChange={(event) => {
-          console.log(event.target.files[0]);
-          setSelectedImage(event.target.files[0]);
-        }}
-      />
     </div>
   );
 };
